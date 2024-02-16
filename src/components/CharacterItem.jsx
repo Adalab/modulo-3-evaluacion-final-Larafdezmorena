@@ -1,4 +1,4 @@
-import { ReactPropTypes } from "prop-types";
+import { PropTypes } from "prop-types";
 function CharacterItem({ photo, name, race }) {
   return (
     <>
