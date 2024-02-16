@@ -2,10 +2,14 @@ import { PropTypes } from "prop-types";
 function CharacterItem({ photo, name, race }) {
   return (
     <>
-      <img className="characters__image" src="" alt="Foto de Harry Potter" />
-      {photo}
+      <img
+        className="characters__image"
+        src={photo}
+        alt="Foto de Harry Potter"
+      />
+
       <h2 className="characters__name">{name}</h2>
-      <h3 className="character__race">{race}</h3>
+      <h3 className="characters__race">{race}</h3>
     </>
   );
 }

@@ -3,7 +3,12 @@ function Filters() {
     <form className="filter">
       <label className="filter__label" htmlFor="character">
         Buscar por personaje
-        <input className="text" type="text" name="" />
+        <input
+          className="filter__input"
+          type="text"
+          name=""
+          placeholder="Ej. Luna Lovegood"
+        />
       </label>
       <label className="filter__label" htmlFor="house">
         Selecciona la casa

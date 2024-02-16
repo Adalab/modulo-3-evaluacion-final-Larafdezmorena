@@ -1,1 +1,67 @@
 @import 'core/reset';
+
+.page {
+    background: linear-gradient(to right, transparent, mistyrose);
+    width: 100vw;
+}
+.filter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+
+    &__label {
+        padding: 10px;
+        color: red;
+    }
+    &__input {
+        height: 30px;
+        width: 350px;
+        border-radius: 5px;
+    }
+    &__select {
+        border-radius: 5px;
+        height: 30px;
+        width: 250px;
+    }
+}
+.characters {
+    &__list {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 0;
+    }
+    &__image{
+        background-color: red;
+        width: 90%;
+        height: 250px; /* Ajusta la altura según tu diseño */
+        object-fit: cover; /* La imagen se ajusta dentro del marco manteniendo la relación de aspecto y cubriendo el contenido */
+        border-radius: 8px
+    }
+    &__name{
+        color: red;
+        font-size: 30px;
+    }
+    &__race {
+        color: blue;
+        text-transform: capitalize;
+    }
+}
+.character__item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 250px;
+        height: 350px;
+        margin: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease-in-out;
+        border-radius: 8px;
+        background-color: aquamarine;
+    }
+    .character__item:hover {
+        transform: scale(1.05);
+    }
