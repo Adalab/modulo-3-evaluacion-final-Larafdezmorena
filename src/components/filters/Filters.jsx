@@ -6,6 +6,7 @@ import FilterHouse from "./FilterHouse";
 function Filters({ handleFilter }) {
   return (
     <form className="filter">
+      <h1 className="header__title">Busca tus magos favoritos</h1>
       <FilterCharacter handleFilter={handleFilter} />
       <FilterHouse handleFilter={handleFilter} />
     </form>

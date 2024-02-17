@@ -1,8 +1,39 @@
 @import 'core/reset';
+@import 'core/fonts';
 
 .page {
-    background: linear-gradient(to right, transparent, mistyrose);
+    background: rgb(188,188,81);
+background: radial-gradient(circle, rgba(188,188,81,1) 0%, rgba(36,33,107,1) 100%);
     width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.header {
+    display: flex;
+    flex-direction: column;
+    &__logo {
+        margin: 20px;
+        display: flex;
+        object-fit: cover;
+        width: auto;
+        height: 250px;
+    }
+    &__box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &__title {
+        font: var(--font-title);
+        color: rgb(47, 47, 54);
+        padding-top: 50px;
+        padding-bottom: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 }
 .filter {
     display: flex;
@@ -12,7 +43,7 @@
 
     &__label {
         padding: 10px;
-        color: red;
+        color: rgb(47, 47, 54);
     }
     &__input {
         height: 30px;
@@ -28,40 +59,78 @@
 .characters {
     &__list {
         list-style: none;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        padding: 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: 0;
     }
     &__image{
         background-color: red;
         width: 90%;
-        height: 250px; /* Ajusta la altura según tu diseño */
+        height: 250px;
         object-fit: cover; /* La imagen se ajusta dentro del marco manteniendo la relación de aspecto y cubriendo el contenido */
         border-radius: 8px
     }
     &__name{
-        color: red;
-        font-size: 30px;
+        color: rgb(97, 96, 146);
+        font-size: 25px;
     }
     &__race {
-        color: blue;
+        color: rgb(201, 201, 211);
         text-transform: capitalize;
+        font-size: 20px;
+    
     }
 }
 .character__item {
         display: flex;
         flex-direction: column;
+        text-align: center;
         justify-content: center;
         align-items: center;
         width: 250px;
         height: 350px;
         margin: 20px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         transition: transform 0.3s ease-in-out;
         border-radius: 8px;
-        background-color: aquamarine;
+        background-color: rgb(13, 11, 36);
     }
     .character__item:hover {
         transform: scale(1.05);
     }
+.card {
+    display: flex;
+    
+    list-style: none;
+    width: 75vw;
+    height: 300px;
+        margin: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease-in-out;
+        border-radius: 8px;
+        background-color: rgb(13, 11, 36);
+    &__image {
+    object-fit: cover;
+    padding: 20px;
+    border-radius: 8px
+    }
+    &__list {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        margin: 0;
+        padding-left: 30px;
+    }
+    
+    &__detail {
+       display: flex;
+        color: white;
+        font-size: 20px;
+        margin: 0;
+        text-transform: capitalize;
+    }
+}
