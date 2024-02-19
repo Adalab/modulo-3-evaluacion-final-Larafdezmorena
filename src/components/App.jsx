@@ -17,16 +17,15 @@ function App() {
   const [filterHouse, setFilterHouse] = useState("Gryffindor");
   const [filterCharacter, setFilterCharacter] = useState("");
 
+  //Fetch
   useEffect(() => {
     fetchCharacters().then((data) => {
       setCharactersList(data);
     });
   }, []);
 
+  //Filters
   const handleFilter = (filterName, value) => {
-    console.log(filterName);
-    console.log(value);
-
     if (filterName === "character") {
       setFilterCharacter(value);
     } else if (filterName === "house") setFilterHouse(value);
@@ -37,7 +36,7 @@ function App() {
   });
 
   const filteredTotal = filteredCharactersByHouses.filter((character) =>
-    character.name.includes(filterCharacter)
+    character.name.toLowerCase().includes(filterCharacter)
   );
 
   const findCharacter = (value) => {
