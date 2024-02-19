@@ -1,5 +1,5 @@
 import { PropTypes } from "prop-types";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 function CharacterDetail({ findCharacter }) {
   const params = useParams();
@@ -13,7 +13,7 @@ function CharacterDetail({ findCharacter }) {
             ? character.image
             : "https://via.placeholder.com/210x295//666666/?text=HarryPotter"
         }
-        alt="Foto de Harry Potter"
+        alt={character.name}
       />
       <ul className="card__list">
         <li className="card__detail">{character.name}</li>
@@ -22,6 +22,7 @@ function CharacterDetail({ findCharacter }) {
         <li className="card__detail">Género: {character.gender}</li>
         <li className="card__detail">Casa: {character.house}</li>
       </ul>
+      <Link to="/">Volver</Link>
     </div>
   );
 }
