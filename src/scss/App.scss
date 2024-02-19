@@ -2,8 +2,7 @@
 @import 'core/fonts';
 
 .page {
-    background: rgb(188,188,81);
-background: radial-gradient(circle, rgba(188,188,81,1) 0%, rgba(36,33,107,1) 100%);
+    background: radial-gradient(circle, rgba(188,188,81,1) 0%, rgba(36,33,107,1) 100%);
     width: 100vw;
     display: flex;
     flex-direction: column;
@@ -19,6 +18,7 @@ background: radial-gradient(circle, rgba(188,188,81,1) 0%, rgba(36,33,107,1) 100
         object-fit: cover;
         width: auto;
         height: 250px;
+        animation: pulsate 7s infinite;
     }
     &__box {
         display: flex;
@@ -27,8 +27,8 @@ background: radial-gradient(circle, rgba(188,188,81,1) 0%, rgba(36,33,107,1) 100
     }
     &__title {
         font: var(--font-title);
-        color: rgb(47, 47, 54);
-        padding-top: 50px;
+        color: rgb(197, 197, 217);
+        padding-top: 20px;
         padding-bottom: 50px;
         display: flex;
         align-items: center;
@@ -40,10 +40,14 @@ background: radial-gradient(circle, rgba(188,188,81,1) 0%, rgba(36,33,107,1) 100
     flex-direction: column;
     align-items: center;
     margin: 10px;
+    gap: 10px;
 
     &__label {
+        display: flex;
         padding: 10px;
         color: rgb(47, 47, 54);
+        font-weight: bold;
+    
     }
     &__input {
         height: 30px;
@@ -76,8 +80,9 @@ background: radial-gradient(circle, rgba(188,188,81,1) 0%, rgba(36,33,107,1) 100
     &__name{
         color: rgb(97, 96, 146);
         font-size: 25px;
+        text-decoration: none;
     }
-    &__race {
+    &__species {
         color: rgb(201, 201, 211);
         text-transform: capitalize;
         font-size: 20px;
@@ -125,12 +130,41 @@ background: radial-gradient(circle, rgba(188,188,81,1) 0%, rgba(36,33,107,1) 100
         margin: 0;
         padding-left: 30px;
     }
-    
+    &__name {
+        font-size: 30px;
+        color: rgb(200, 213, 219);
+        list-style: none;
+    }
     &__detail {
-       display: flex;
+        display: flex;
         color: white;
         font-size: 20px;
         margin: 0;
         text-transform: capitalize;
+    }
+    &__back {
+        text-decoration: none;
+        background-color: rgb(188, 172, 228);
+        border: solid 2px;
+        border-radius: 8px;
+        height: 40px;
+        width: 150px;
+    }
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+
+    &__copy {
+        padding-bottom: 10px;
+    }
+
+    &__spell {
+        padding-bottom: 20px;
+        font-size: 12px;
     }
 }

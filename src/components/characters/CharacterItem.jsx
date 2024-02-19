@@ -15,7 +15,7 @@ function CharacterItem({ photo, name, race, id }) {
         />
 
         <h2 className="characters__name">{name}</h2>
-        <h3 className="characters__race">{race}</h3>
+        <h3 className="characters__species">{race}</h3>
       </>
     </Link>
   );

@@ -7,7 +7,7 @@ import Filters from "./filters/Filters";
 import CharactersList from "./characters/CharactersList";
 import Header from "./Header";
 import Footer from "./Footer";
-import CharacterDetail from "./CharacterDetail";
+import CharacterDetail from "./characters/CharacterDetail";
 
 import { fetchCharacters } from "./services/fetch";
 import "../scss/App.scss";
