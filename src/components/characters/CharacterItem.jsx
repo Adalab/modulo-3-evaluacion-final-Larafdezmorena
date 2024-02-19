@@ -6,8 +6,12 @@ function CharacterItem({ photo, name, race, id }) {
       <>
         <img
           className="characters__image"
-          src={photo}
-          alt="Foto de Harry Potter"
+          src={
+            photo
+              ? photo
+              : " https://via.placeholder.com/210x295//666666/?text=HarryPotter"
+          }
+          alt="Foto de ${name}"
         />
 
         <h2 className="characters__name">{name}</h2>
