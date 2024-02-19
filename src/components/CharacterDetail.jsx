@@ -8,7 +8,11 @@ function CharacterDetail({ findCharacter }) {
     <div className="card">
       <img
         className="card__image"
-        src={character.image}
+        src={
+          character.image
+            ? character.image
+            : "https://via.placeholder.com/210x295//666666/?text=HarryPotter"
+        }
         alt="Foto de Harry Potter"
       />
       <ul className="card__list">

@@ -1,21 +1,27 @@
-import { useState } from "react";
+//React imports
+import { useEffect, useState } from "react";
+import { Routes, Route } from "react-router-dom";
 
+//Components imports
 import Filters from "./filters/Filters";
 import CharactersList from "./characters/CharactersList";
 import Header from "./Header";
 import Footer from "./Footer";
 import CharacterDetail from "./CharacterDetail";
 
-import charactersOriginal from "../data/characters.json";
-
+import { fetchCharacters } from "./services/fetch";
 import "../scss/App.scss";
-import { Routes, Route } from "react-router-dom";
 
 function App() {
-  const [charactersList] = useState(charactersOriginal);
-
+  const [charactersList, setCharactersList] = useState([]);
   const [filterHouse, setFilterHouse] = useState("Gryffindor");
   const [filterCharacter, setFilterCharacter] = useState("");
+
+  useEffect(() => {
+    fetchCharacters().then((data) => {
+      setCharactersList(data);
+    });
+  }, []);
 
   const handleFilter = (filterName, value) => {
     console.log(filterName);
